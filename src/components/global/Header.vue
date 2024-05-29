@@ -27,6 +27,12 @@ const currentColor = computed(() => {
   return '#3a4e72';
 });
 
+import { format } from 'date-fns';
+
+const getCurrentDate = () => {
+  return format(new Date(), 'yyyy-MM-dd');
+}
+
 </script>
 
 <template>
@@ -42,6 +48,7 @@ const currentColor = computed(() => {
       </router-link>
     </nav>
     <BurgerMenuButton v-model="isMenuOpen" class="burger-button"/>
+    <p>{{ getCurrentDate() }}</p>
   </header>
 </template>
 
