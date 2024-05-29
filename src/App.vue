@@ -2,11 +2,12 @@
 import { RouterView } from 'vue-router'
 import Header from '@/components/global/Header.vue';
 import Footer from '@/components/global/Footer.vue';
-import moment from 'moment';
+import { format } from 'date-fns';
 
 const getCurrentDate = () => {
-  return moment().format('YYYY-MM-DD');
+  return format(new Date(), 'yyyy-MM-dd');
 }
+
 </script>
 
 <template>

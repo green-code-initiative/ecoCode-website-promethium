@@ -4,7 +4,6 @@ import { useRoute } from 'vue-router';
 import ChevronLeftIcon from '@/assets/icons/chevron_left.svg?component';
 import ChevronRightIcon from '@/assets/icons/chevron_right.svg?component';
 import BurgerMenuButton from "@/components/global/header/BurgerMenuButton.vue";
-import moment from 'moment';
 
 const route = useRoute();
 const isMenuOpen = ref(false);
@@ -28,8 +27,6 @@ const currentColor = computed(() => {
   return '#3a4e72';
 });
 
-const date = moment().format("LTS");
-console.log(date);
 </script>
 
 <template>
